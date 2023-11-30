@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "w6/JY3WSjhBJcOxxRaRRfTINds+qmiMy+6edhSsW85rrPckAB1OuNoEBYIWIDReRlt+bxgoctswWqVY5Dil0dw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Validation\\Validation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}
