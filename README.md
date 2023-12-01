@@ -1,25 +1,46 @@
 # ToDoApp_Web_Api
-Oncelikle layihenin .Net Core 6 da ve N-Tier arxitekturasi ile yazildigini qeyd edim. 
-Funksiyanalliq:
-Layihemde register, login, istifadecilere baxmaq, silmek, istifadeci melumatlarini deyismek kimi funksiyanalliqlar var. 
-Login hissede jwt token ve refresh tokenden istifade etmisem.
-Bu sebeble Istifadeciler login olub authorized olduqdan sonra sadece selahiyyetleri olan isleri edebilirler.
-Sprint elave etmek, deyismek, silmek;
-Assignment elave etmek, deyismek, silmek;
-Istifadeciler ve bu istifadecilerin rollari var;
-Layihe Istifadeci rollarina gore iki hisseye bolunmusdur. Project manager ve developer.
-Project Managerin selahiyetleri: 
-Sprintlerin ve assignmentlarin butun proseslerine nezaret edebilir;
-Assignmentlere developerleri elave etmek, silmek veya bu developerlerin bir assignmentden basqa bir assignmente yerini deyismek; 
-Assignmentin statusunu deyismek;
-Butun sprintleri ve o sprintlere aid olan assignmentleri izlemek;
-Assignmenti update ederek aid oldugu sprintini deyismek;
-Todo Listin Code Review asamasinda rey yazmaq;
-Developerlerin selahiyyetleri:
-Butun Assignmentleri gormek;
-Yalniz oz assignmentlerini gormek;
-Assignmentin statusunu deyismek;
-Todo Listin Code Review asamasinda rey yazmaq(Sadece assign edildiyi assignmentle bagli rey yazabiler);
-Butun bunlardan elave assignmentlerin expiredate-i bitdiyi zaman onlarin statusunu avtamatik database-de failed olaraq deyisir. Bu Scheduling Cron metoduyla yazilmisdir. 
 
+Bu proje, .NET Core 6 ve N-Tier mimarisi kullanılarak geliştirilmiştir.
 
+## Funksiyanallıqlar
+
+- **İstifadəçi İdarəetməsi**
+  - İstifadəçi qeydiyyatı (Register)
+  - İstifadəçi girişi (Login) - JWT token və refresh token istifadəsi
+  - İstifadəçiləri görüntüləmə
+  - İstifadəçiləri silmə
+  - İstifadəçi məlumatlarını dəyişmə
+
+- **Yetkiləndirmə**
+  - İstifadəçilərin giriş etdikdən sonra yalnızca yetkilə işləmləri icra etməsi
+  - Yetkilərə görə iki əsas bölmə: Layihə rəhbəri və İşçi
+
+- **Sprint Əməliyyatları**
+  - Sprint əlavə etmək, dəyişmək, silmək
+
+- **Tapşırıq Əməliyyatları**
+  - Tapşırıq əlavə etmək, dəyişmək, silmək
+
+- **Rollar**
+  - İstifadəçilərin iki əsas rolu mövcuddur:
+    - Layihə rəhbəri
+    - İşçi
+
+- **Layihə Rəhbəri Yetkiləri:**
+  - Sprintlərin və tapşırıqların bütün proseslərinə nəzarət etmə
+  - Tapşırıqlara işçi əlavə etmək, silmək və ya bu işçilərin bir tapşırıqdan başqa bir tapşırıqa yerini dəyişmək
+  - Tapşırığın statusunu dəyişmək
+  - Bütün sprintləri və ona aid olan tapşırıqları izləmək
+  - Tapşırığı yeniləyərək ona aid olduğu sprinti dəyişmək
+  - Todo List'də Code Review mərhələsində görüş yazmaq
+
+- **İşçi Yetkiləri:**
+  - Bütün Tapşırıqları görmək
+  - Yalnız öz tapşırıqlarını görmək
+  - Tapşırığın statusunu dəyişmək
+  - Todo List'də Code Review mərhələsində yalnız assign edildiyi tapşırıq ilə əlaqəli rəy yazmaq
+   
+- Tapşırıqların expire tarixi bitdiyində, avtomatik olaraq statuslarını "failed" olaraq dəyişmə (Cron job ilə)
+
+## Lisenziya
+Bu layihə MIT Lisenziyası ilə lisenziyalanmışdır - detallar üçün [LICENSE.md](LICENSE.md) faylına baxın.
