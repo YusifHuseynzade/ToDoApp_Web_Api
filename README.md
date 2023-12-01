@@ -1,6 +1,6 @@
 # ToDoApp_Web_Api
 
-Bu proje, .NET Core 6 ve N-Tier mimarisi kullanılarak geliştirilmiştir.
+Bu layihe, .NET Core 6 və N-Tier arxitekturası istifadə edilərək yazilmisdir.
 
 ## Funksiyanallıqlar
 
