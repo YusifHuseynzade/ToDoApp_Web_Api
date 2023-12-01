@@ -31,6 +31,9 @@ namespace BLL.Concrete
 
             Sprint sprint = _mapper.Map<Sprint>(postDto);
 
+            if (sprint.ExpirationDate < sprint.StartedDate)
+                return new BadRequestObjectResult(new { error = new { field = "ExpirationDate", message = "ExpirationDate cannot be earlier than StartedDate!" } });
+
             await _sprintRepository.AddAsync(sprint);
             await _sprintRepository.CommitAsync();
 
@@ -46,6 +49,9 @@ namespace BLL.Concrete
                 return new BadRequestObjectResult(new { error = "Bad Request" });
 
             _mapper.Map(putDto, sprint);
+
+            if (sprint.ExpirationDate < sprint.StartedDate)
+                return new BadRequestObjectResult(new { error = "ExpirationDate cannot be earlier than StartedDate" });
 
             await _sprintRepository.UpdateAsync(sprint);
             return new NoContentResult();

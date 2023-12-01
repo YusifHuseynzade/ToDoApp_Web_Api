@@ -17,6 +17,7 @@ namespace BLL.Abstract
         Task<IActionResult> GetAssignmentBySprintId(int sprintId, int page);
         Task<IActionResult> GetAssignmentByAppUserId(int appUserId, int page);
         Task<IActionResult> UpdateAssignmentStatus(UpdateAssignmentStatusDto updateDto);
+        Task<IActionResult> AllowReviewForAssignmentAsync(AssignmentReviewDto assignmentReviewDTO);
         Task<IActionResult> UpdateExpiredAssignmentsStatus();
         Task<IActionResult> Delete(int id);
     }

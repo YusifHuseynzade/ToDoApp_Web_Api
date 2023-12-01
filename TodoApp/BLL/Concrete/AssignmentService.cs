@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,14 +23,18 @@ namespace BLL.Concrete
         private readonly IAssignmentRepository _assignmentRepository;
         private readonly ISprintRepository _sprintRepository;
         private readonly IStatusRepository _statusRepository;
+        private readonly IAssignmentUserRepository _assignmentUserRepository;
+        private readonly IReviewRepository _reviewRepository;
 
 
-        public AssignmentService(IMapper mapper, IAssignmentRepository assignmentRepository, ISprintRepository sprintRepository, IStatusRepository statusRepository)
+        public AssignmentService(IMapper mapper, IAssignmentRepository assignmentRepository, ISprintRepository sprintRepository, IStatusRepository statusRepository, IAssignmentUserRepository assignmentUserRepository, IReviewRepository reviewRepository)
         {
             _mapper = mapper;
             _assignmentRepository = assignmentRepository;
             _sprintRepository = sprintRepository;
             _statusRepository = statusRepository;
+            _assignmentUserRepository = assignmentUserRepository;
+            _reviewRepository = reviewRepository;
         }
 
         public async Task<IActionResult> Create(AssignmentPostDto postDto)
@@ -58,6 +63,11 @@ namespace BLL.Concrete
                 }
 
                 Assignment assignment = _mapper.Map<Assignment>(postDto);
+
+                if (assignment.ExpirationDate < assignment.StartedDate)
+                {
+                    return new BadRequestObjectResult(new { error = new { field = "ExpirationDate", message = "Assignment's ExpirationDate cannot be earlier than StartedDate." } });
+                }
 
                 if (postDto.AppUserIds != null && postDto.AppUserIds.Any())
                 {
@@ -103,6 +113,11 @@ namespace BLL.Concrete
             }
 
             _mapper.Map(putDto, existingAssignment);
+
+            if (existingAssignment.ExpirationDate < existingAssignment.StartedDate)
+            {
+                return new BadRequestObjectResult(new { error = new { field = "ExpirationDate", message = "Assignment's ExpirationDate cannot be earlier than StartedDate." } });
+            }
 
             existingAssignment.AssignmentUsers.Clear();
             if (putDto.AppUserIds != null && putDto.AppUserIds.Any())
@@ -156,15 +171,12 @@ namespace BLL.Concrete
                 {
                     assignment.StatusId = GetFailedStatusId();
                 }
-
                 await _assignmentRepository.CommitAsync();
-
-                // Başarılı bir işlem durumunda StatusCode 200 dönebilirsiniz.
+               
                 return new OkObjectResult(new { message = "Expired assignments updated successfully." });
             }
             catch (Exception ex)
             {
-                // Hata durumunda StatusCode 500 dönebilirsiniz.
                 Console.WriteLine($"Error during assignment update: {ex.Message}");
                 return new StatusCodeResult(500);
             }
@@ -172,13 +184,10 @@ namespace BLL.Concrete
 
         private int GetFailedStatusId()
         {
-            // Örneğin, "Failed" adındaki bir durumun ID'sini almak için bir repository kullanabilirsiniz.
             var failedStatus = _statusRepository.FirstOrDefaultAsync(s => s.Name == "Failed").Result;
-
-            // Eğer "Failed" adında bir durum bulunamazsa, hata durumu için varsayılan bir değer döndürebilirsiniz.
+          
             if (failedStatus == null)
             {
-                // Varsayılan olarak 1 değerini kullanıyoruz, ancak sizin durumunuza bağlı olarak değiştirilebilir.
                 return 1;
             }
 
@@ -245,6 +254,48 @@ namespace BLL.Concrete
             _assignmentRepository.Remove(assignment);
             _assignmentRepository.Commit();
             return new NoContentResult();
+        }
+
+        public async Task<IActionResult> AllowReviewForAssignmentAsync(AssignmentReviewDto assignmentReviewDTO)
+        {
+            try
+            {
+                var codeReviewStatus = await _statusRepository.GetAsync(s => s.Id == assignmentReviewDTO.StatusId);
+                if (codeReviewStatus.Name.ToLower() != "code review")
+                {
+                    return new BadRequestObjectResult("Invalid status for allowing reviews.");
+                }
+
+                var assignment = await _assignmentRepository.GetAsync(a => a.Id == assignmentReviewDTO.AssignmentId, "AssignmentUsers");
+
+                if (assignment.StatusId != assignmentReviewDTO.StatusId)
+                {
+                    return new BadRequestObjectResult("Assignment is not in the specified code review status.");
+                }
+
+                var validAppUserIds = assignment.AssignmentUsers.Select(au => au.AppUserId).ToList();
+                if (!validAppUserIds.Contains(assignmentReviewDTO.AppUserId))
+                {
+                    return new BadRequestObjectResult($"AppUser with Id {assignmentReviewDTO.AppUserId} is not assigned to this assignment.");
+                }
+
+                var review = new Review
+                {
+                    AssignmentId = assignmentReviewDTO.AssignmentId,
+                    AppUserId = assignmentReviewDTO.AppUserId,
+                    Text = assignmentReviewDTO.ReviewText
+                };
+                await _reviewRepository.AddAsync(review);
+
+                await _reviewRepository.CommitAsync();
+
+                return new OkObjectResult("Review added successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return new StatusCodeResult(500);
+            }
         }
     }
 }

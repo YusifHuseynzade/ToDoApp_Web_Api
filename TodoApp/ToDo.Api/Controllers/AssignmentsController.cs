@@ -1,5 +1,6 @@
 ﻿using BLL.Abstract;
 using BLL.Concrete;
+using DTO.AccountDtos;
 using DTO.AssignmentDtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +34,7 @@ namespace ToDo.Api.Controllers
 
         }
 
-        [Authorize(Roles = "Project Manager")]
+        [Authorize(Roles = "Project Manager, Developer")]
         [HttpGet("all")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
@@ -59,6 +60,13 @@ namespace ToDo.Api.Controllers
         public async Task<IActionResult> UpdateAssignmentStatus([FromQuery] UpdateAssignmentStatusDto putDto)
         {
             return await _assignmentService.UpdateAssignmentStatus(putDto);
+        }
+
+        [Authorize(Roles = "Project Manager, Developer")]
+        [HttpGet("AssignmentReview")]
+        public async Task<IActionResult> AllowReviewsForAssignmentAsync([FromQuery] AssignmentReviewDto postDto)
+        {
+            return await _assignmentService.AllowReviewForAssignmentAsync(postDto);
         }
 
         [Authorize(Roles = "Project Manager")]
