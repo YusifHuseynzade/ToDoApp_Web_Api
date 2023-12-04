@@ -61,6 +61,7 @@ builder.Services.AddScoped<IAppUserService, AppUserService>();
 builder.Services.AddScoped<ISprintService, SprintService>();
 builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
+
 builder.Services.AddHostedService<ExpiredAssignmentService>();
 
 builder.Services.AddDbContext<AppDbContext>(opt =>

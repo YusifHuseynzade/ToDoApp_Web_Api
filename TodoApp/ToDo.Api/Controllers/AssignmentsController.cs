@@ -56,14 +56,14 @@ namespace ToDo.Api.Controllers
         }
 
         [Authorize(Roles = "Project Manager, Developer")]
-        [HttpGet("UpdateAssignmentStatus")]
+        [HttpPut("UpdateAssignmentStatus")]
         public async Task<IActionResult> UpdateAssignmentStatus([FromQuery] UpdateAssignmentStatusDto putDto)
         {
             return await _assignmentService.UpdateAssignmentStatus(putDto);
         }
 
         [Authorize(Roles = "Project Manager, Developer")]
-        [HttpGet("AssignmentReview")]
+        [HttpPost("AssignmentReview")]
         public async Task<IActionResult> AllowReviewsForAssignmentAsync([FromQuery] AssignmentReviewDto postDto)
         {
             return await _assignmentService.AllowReviewForAssignmentAsync(postDto);
