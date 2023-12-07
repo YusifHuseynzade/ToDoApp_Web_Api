@@ -816,14 +816,14 @@
           }
         }
       },
-      "Entity/1.0.0": {
+      "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Entity.dll": {}
+          "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Entity.dll": {}
+          "bin/placeholder/Domain.dll": {}
         }
       }
     }
@@ -2085,17 +2085,17 @@
         "version.txt"
       ]
     },
-    "Entity/1.0.0": {
+    "Domain/1.0.0": {
       "type": "project",
-      "path": "../Entity/Entity.csproj",
-      "msbuildProject": "../Entity/Entity.csproj"
+      "path": "../Entity/Domain.csproj",
+      "msbuildProject": "../Entity/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Autofac >= 6.5.0",
       "Autofac.Extensions.DependencyInjection >= 6.0.0",
-      "Entity >= 1.0.0",
+      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.25",
@@ -2134,8 +2134,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj"
+            "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj"
             }
           }
         }

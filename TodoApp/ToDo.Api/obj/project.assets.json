@@ -51,7 +51,7 @@
           }
         }
       },
-      "FluentValidation/11.8.0": {
+      "FluentValidation/11.8.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/FluentValidation.dll": {
@@ -1417,14 +1417,13 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "DAL": "1.0.0",
-          "DTO": "1.0.0",
-          "Entity": "1.0.0",
+          "Domain": "1.0.0",
+          "FluentValidation": "11.8.1",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.IdentityModel.Tokens": "6.10.0",
-          "System.IdentityModel.Tokens.Jwt": "6.10.0",
-          "Validation": "1.0.0"
+          "System.IdentityModel.Tokens.Jwt": "6.10.0"
         },
         "compile": {
           "bin/placeholder/BLL.dll": {}
@@ -1439,7 +1438,7 @@
         "dependencies": {
           "Autofac": "6.5.0",
           "Autofac.Extensions.DependencyInjection": "6.0.0",
-          "Entity": "1.0.0",
+          "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25"
         },
@@ -1450,38 +1449,14 @@
           "bin/placeholder/DAL.dll": {}
         }
       },
-      "DTO/1.0.0": {
+      "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/DTO.dll": {}
+          "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DTO.dll": {}
-        }
-      },
-      "Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entity.dll": {}
-        }
-      },
-      "Validation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "DTO": "1.0.0",
-          "FluentValidation": "11.8.0"
-        },
-        "compile": {
-          "bin/placeholder/Validation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Validation.dll": {}
+          "bin/placeholder/Domain.dll": {}
         }
       }
     }
@@ -1540,16 +1515,16 @@
         "lib/netstandard2.1/AutoMapper.xml"
       ]
     },
-    "FluentValidation/11.8.0": {
-      "sha512": "TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
+    "FluentValidation/11.8.1": {
+      "sha512": "N72rnlE99XYB7EGA1u9y7m7kNTTynqOPBhZqDE8zr1Y0aSR4t5si94LRA7UVdAV09GaXWCErW+EiFhfbg3DSbg==",
       "type": "package",
-      "path": "fluentvalidation/11.8.0",
+      "path": "fluentvalidation/11.8.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.8.0.nupkg.sha512",
+        "fluentvalidation.11.8.1.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -3595,20 +3570,10 @@
       "path": "../DAL/DAL.csproj",
       "msbuildProject": "../DAL/DAL.csproj"
     },
-    "DTO/1.0.0": {
+    "Domain/1.0.0": {
       "type": "project",
-      "path": "../DTO/DTO.csproj",
-      "msbuildProject": "../DTO/DTO.csproj"
-    },
-    "Entity/1.0.0": {
-      "type": "project",
-      "path": "../Entity/Entity.csproj",
-      "msbuildProject": "../Entity/Entity.csproj"
-    },
-    "Validation/1.0.0": {
-      "type": "project",
-      "path": "../Validation/Validation.csproj",
-      "msbuildProject": "../Validation/Validation.csproj"
+      "path": "../Entity/Domain.csproj",
+      "msbuildProject": "../Entity/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

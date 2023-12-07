@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nxia/ttsJET9/9yPcFysg85iLvpOPWM4YEzZfQYoNk6w7HEOKFknnBVLqWLJpwK1kKpU2tsMXlEWkRwONhovNw==",
+  "dgSpecHash": "e9lcG9jkG7wtYwkZk6JcuKEisssKnkdbHT9cBoKeAKawWpqT0tsfnGE4rWt7aqA13B8+LP1OWdwO0rt3t3wTfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

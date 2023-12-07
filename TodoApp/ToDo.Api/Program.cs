@@ -4,17 +4,15 @@ using AutoMapper;
 using BLL.Abstract;
 using BLL.Concrete;
 using BLL.Mapper;
-using DAL.Abstract;
 using DAL.AutoFac;
-using DAL.Concrete;
 using DAL.Context;
+using DAL.Repositories;
+using Domain.IRepositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
-using Autofac.Core;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,7 +77,7 @@ builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(
-    builder=>builder.RegisterInstance(new AutoFacBusiness()));
+    builder => builder.RegisterInstance(new AutoFacBusiness()));
 
 var app = builder.Build();
 

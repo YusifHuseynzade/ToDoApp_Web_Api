@@ -54,11 +54,11 @@
           }
         }
       },
-      "FluentValidation/11.8.0": {
+      "FluentValidation/11.8.1": {
         "runtime": {
           "lib/net6.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.8.0.0"
+            "fileVersion": "11.8.1.0"
           }
         }
       },
@@ -740,14 +740,13 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "DAL": "1.0.0",
-          "DTO": "1.0.0",
-          "Entity": "1.0.0",
+          "Domain": "1.0.0",
+          "FluentValidation": "11.8.1",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.IdentityModel.Tokens": "6.10.0",
-          "System.IdentityModel.Tokens.Jwt": "6.10.0",
-          "Validation": "1.0.0"
+          "System.IdentityModel.Tokens.Jwt": "6.10.0"
         },
         "runtime": {
           "BLL.dll": {}
@@ -757,7 +756,7 @@
         "dependencies": {
           "Autofac": "6.5.0",
           "Autofac.Extensions.DependencyInjection": "6.0.0",
-          "Entity": "1.0.0",
+          "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25"
         },
@@ -765,23 +764,9 @@
           "DAL.dll": {}
         }
       },
-      "DTO/1.0.0": {
+      "Domain/1.0.0": {
         "runtime": {
-          "DTO.dll": {}
-        }
-      },
-      "Entity/1.0.0": {
-        "runtime": {
-          "Entity.dll": {}
-        }
-      },
-      "Validation/1.0.0": {
-        "dependencies": {
-          "DTO": "1.0.0",
-          "FluentValidation": "11.8.0"
-        },
-        "runtime": {
-          "Validation.dll": {}
+          "Domain.dll": {}
         }
       }
     }
@@ -813,12 +798,12 @@
       "path": "automapper/12.0.1",
       "hashPath": "automapper.12.0.1.nupkg.sha512"
     },
-    "FluentValidation/11.8.0": {
+    "FluentValidation/11.8.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
-      "path": "fluentvalidation/11.8.0",
-      "hashPath": "fluentvalidation.11.8.0.nupkg.sha512"
+      "sha512": "sha512-N72rnlE99XYB7EGA1u9y7m7kNTTynqOPBhZqDE8zr1Y0aSR4t5si94LRA7UVdAV09GaXWCErW+EiFhfbg3DSbg==",
+      "path": "fluentvalidation/11.8.1",
+      "hashPath": "fluentvalidation.11.8.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
@@ -1376,17 +1361,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DTO/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Entity/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Validation/1.0.0": {
+    "Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

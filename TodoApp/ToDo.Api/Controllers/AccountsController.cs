@@ -1,8 +1,9 @@
 using BLL.Abstract;
 using DTO.AccountDtos;
-using Entity.Entities;
+using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using BLL.Dtos.AccountDtos;
 
 namespace ToDo.Api.Controllers
 {

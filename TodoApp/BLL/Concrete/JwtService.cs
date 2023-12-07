@@ -1,5 +1,5 @@
 ﻿using BLL.Abstract;
-using Entity.Entities;
+using Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

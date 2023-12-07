@@ -14,16 +14,6 @@
             "related": ".xml"
           }
         }
-      },
-      "DTO/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/DTO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DTO.dll": {}
-        }
       }
     }
   },
@@ -50,16 +40,10 @@
         "lib/netstandard2.1/FluentValidation.dll",
         "lib/netstandard2.1/FluentValidation.xml"
       ]
-    },
-    "DTO/1.0.0": {
-      "type": "project",
-      "path": "../DTO/DTO.csproj",
-      "msbuildProject": "../DTO/DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DTO >= 1.0.0",
       "FluentValidation >= 11.8.0"
     ]
   },
@@ -94,11 +78,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\DELL\\Desktop\\TodoApp\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\DTO\\DTO.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

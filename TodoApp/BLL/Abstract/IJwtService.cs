@@ -1,4 +1,4 @@
-﻿using Entity.Entities;
+﻿using Domain.Entities;
 using Microsoft.Extensions.Configuration;
 
 namespace BLL.Abstract

@@ -71,12 +71,8 @@ C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\System.Diagnostics.Diagn
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\BLL.dll
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\DAL.dll
-C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\DTO.dll
-C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Entity.dll
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\BLL.pdb
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\DAL.pdb
-C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\DTO.pdb
-C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Entity.pdb
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\obj\Debug\net6.0\ToDo.Api.csproj.AssemblyReference.cache
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\obj\Debug\net6.0\ToDo.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\obj\Debug\net6.0\ToDo.Api.AssemblyInfoInputs.cache
@@ -132,7 +128,7 @@ C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\runtimes\win\lib\netcore
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Validation.dll
-C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Validation.pdb
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Domain.dll
+C:\Users\DELL\Desktop\TodoApp\ToDo.Api\bin\Debug\net6.0\Domain.pdb

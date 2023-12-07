@@ -1,6 +1,5 @@
 ﻿using BLL.Abstract;
-using BLL.Concrete;
-using DTO.SprintDtos;
+using BLL.Dtos.SprintDtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

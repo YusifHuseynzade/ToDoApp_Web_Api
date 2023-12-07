@@ -21,11 +21,7 @@ C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\BLL.deps.json
 C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\BLL.dll
 C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\BLL.pdb
 C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\DAL.dll
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\DTO.dll
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Entity.dll
 C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\DAL.pdb
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\DTO.pdb
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Entity.pdb
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
@@ -36,5 +32,5 @@ C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.dll
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\refint\BLL.dll
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.pdb
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\ref\BLL.dll
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Validation.dll
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Validation.pdb
+C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Domain.dll
+C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Domain.pdb

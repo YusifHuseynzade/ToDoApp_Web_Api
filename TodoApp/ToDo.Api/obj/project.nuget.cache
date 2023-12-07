@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VsmGJUmu2NVEUCZuQa5fIWCFYH22DI0F2huKLkp/i5xp6SdB2phlMcM2Qeg6R974loSC5CrmQXY61HVYPdlaoQ==",
+  "dgSpecHash": "q0qdDkm+fuSyk+2fkFwzRCQnIvIbpMTGvHlNrh7cGwokgb0QDcWua41ikWDXPMu4yBMCmW1C80IxjNwlH6AJXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Desktop\\TodoApp\\ToDo.Api\\ToDo.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\autofac\\6.5.0\\autofac.6.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using BLL.Abstract;
-using DAL.Abstract;
+using BLL.Dtos.AccountDtos;
+using BLL.Dtos.PaginationDto;
+using BLL.Validation.AppUser;
+using Domain.Entities;
+using Domain.IRepositories;
 using DTO.AccountDtos;
-using DTO.AssignmentDtos;
-using DTO.PaginationDto;
-using Entity.Entities;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Security.Cryptography;
 using System.Text;
-using Validation.AppUser;
 
 namespace BLL.Concrete
 {
@@ -49,7 +49,7 @@ namespace BLL.Concrete
 
             await _appUserRepository.AddAsync(appUser);
             await _appUserRepository.CommitAsync();
-            
+
             return new ObjectResult(appUser) { StatusCode = 201 };
         }
         public async Task<List<string>> GetRoleAsync(int roleId)
@@ -62,7 +62,7 @@ namespace BLL.Concrete
             return new List<string>();
         }
 
-       
+
         public async Task<IActionResult> Login(LoginDto loginDto)
         {
             var validationResult = ValidateLoginDto(loginDto);
@@ -198,7 +198,7 @@ namespace BLL.Concrete
 
         public async Task<IActionResult> GetAll(int page)
         {
-            var query = _appUserRepository.GetAll(x => true).Include(p => p.AssignmentUsers).ThenInclude(p => p.Assignment); 
+            var query = _appUserRepository.GetAll(x => true).Include(p => p.AssignmentUsers).ThenInclude(p => p.Assignment);
             var appUserDtos = _mapper.Map<List<AppUserListItemDto>>(query.Skip((page - 1) * 4).Take(4));
 
             PaginationListDto<AppUserListItemDto> model =
@@ -206,7 +206,7 @@ namespace BLL.Concrete
             return new OkObjectResult(model);
         }
 
-       
+
 
         public async Task<IActionResult> Get(int id)
         {

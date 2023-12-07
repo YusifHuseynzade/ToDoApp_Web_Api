@@ -1,7 +1,5 @@
 ﻿using BLL.Abstract;
-using BLL.Concrete;
-using DTO.AccountDtos;
-using DTO.AssignmentDtos;
+using BLL.Dtos.AssignmentDtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

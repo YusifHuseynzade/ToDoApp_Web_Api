@@ -1,5 +1,5 @@
-﻿using DTO.AccountDtos;
-using Entity.Entities;
+﻿using BLL.Dtos.AccountDtos;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 

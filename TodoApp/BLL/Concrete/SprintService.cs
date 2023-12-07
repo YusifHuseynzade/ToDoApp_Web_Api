@@ -1,15 +1,10 @@
 ﻿using AutoMapper;
 using BLL.Abstract;
-using DAL.Abstract;
-using DTO.PaginationDto;
-using DTO.SprintDtos;
-using Entity.Entities;
+using BLL.Dtos.PaginationDto;
+using BLL.Dtos.SprintDtos;
+using Domain.Entities;
+using Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Concrete
 {

@@ -1,19 +1,11 @@
 ﻿using AutoMapper;
 using BLL.Abstract;
-using DAL.Abstract;
-using DAL.Concrete;
-using DTO.AssignmentDtos;
-using DTO.PaginationDto;
-using DTO.SprintDtos;
-using Entity.Entities;
+using BLL.Dtos.AssignmentDtos;
+using BLL.Dtos.PaginationDto;
+using Domain.Entities;
+using Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Concrete
 {
@@ -85,18 +77,18 @@ namespace BLL.Concrete
             catch (Exception ex)
             {
                 Console.WriteLine($"Error during assignment creation: {ex.Message}");
-                return new StatusCodeResult(500); 
+                return new StatusCodeResult(500);
             }
         }
 
         public async Task<IActionResult> Update(AssignmentPutDto putDto)
         {
-           
+
             var existingAssignment = _assignmentRepository.Get(x => x.Id == putDto.Id, "AssignmentUsers.AppUser");
             if (existingAssignment == null)
                 return new NotFoundObjectResult(new { error = new { message = $"Assignment with id {putDto.Id} not found!" } });
 
-           
+
             if (await _assignmentRepository.IsExistAsync(x => x.Title == putDto.Title && x.Id != putDto.Id))
                 return new BadRequestObjectResult(new { error = new { field = "Title", message = "Assignment with the same title already exists!" } });
             var existingSprint = await _sprintRepository
@@ -131,7 +123,7 @@ namespace BLL.Concrete
             await _assignmentRepository.UpdateAsync(existingAssignment);
             await _assignmentRepository.CommitAsync();
 
-            
+
             return new OkResult();
         }
 
@@ -172,7 +164,7 @@ namespace BLL.Concrete
                     assignment.StatusId = GetFailedStatusId();
                 }
                 await _assignmentRepository.CommitAsync();
-               
+
                 return new OkObjectResult(new { message = "Expired assignments updated successfully." });
             }
             catch (Exception ex)
@@ -185,7 +177,7 @@ namespace BLL.Concrete
         private int GetFailedStatusId()
         {
             var failedStatus = _statusRepository.FirstOrDefaultAsync(s => s.Name == "Failed").Result;
-          
+
             if (failedStatus == null)
             {
                 return 1;
@@ -211,9 +203,9 @@ namespace BLL.Concrete
                                               .Include(p => p.Status)
                                               .Include(p => p.AssignmentUsers)
                                               .ThenInclude(p => p.AppUser);
-           
+
             var assignmentDtos = _mapper.Map<List<RelatedAssignmentGetDto>>(query.Skip((page - 1) * 4).Take(4));
-            
+
             PaginationListDto<RelatedAssignmentGetDto> model =
                 new PaginationListDto<RelatedAssignmentGetDto>(assignmentDtos, page, 4, query.Count());
 
@@ -244,7 +236,7 @@ namespace BLL.Concrete
             return new OkObjectResult(assignmentDto);
         }
 
-        
+
         public async Task<IActionResult> Delete(int id)
         {
             Assignment assignment = await _assignmentRepository.GetAsync(x => x.Id == id);

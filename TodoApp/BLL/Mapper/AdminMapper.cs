@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
+using BLL.Dtos.AccountDtos;
+using BLL.Dtos.AssignmentDtos;
+using BLL.Dtos.RoleDto;
+using BLL.Dtos.SprintDtos;
+using BLL.Dtos.StatusDto;
+using Domain.Entities;
 using DTO.AccountDtos;
-using DTO.AssignmentDtos;
-using DTO.RoleDto;
-using DTO.SprintDtos;
-using DTO.StatusDto;
-using Entity.Entities;
 using Microsoft.AspNetCore.Http;
 using System.Data;
 
@@ -23,8 +24,8 @@ namespace BLL.Mapper
             CreateMap<AppUserPutDto, AppUser>();
             CreateMap<AppUser, AppUserGetDto>()
             .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.AppUserRole))
-            .ForMember(dest => dest.Assignments, opt => opt.MapFrom(src => src.AssignmentUsers.Select(pt => new AssignmentInAppUserGetDto { Id = pt.Assignment.Id, Title = pt.Assignment.Title }).ToList()));  
-            CreateMap<AppUser, AppUserListItemDto>().ForMember(dest => dest.Assignments, opt => opt.MapFrom(src => src.AssignmentUsers.Select(pt => new AssignmentInAppUserGetDto { Id = pt.Assignment.Id, Title = pt.Assignment.Title }).ToList())); 
+            .ForMember(dest => dest.Assignments, opt => opt.MapFrom(src => src.AssignmentUsers.Select(pt => new AssignmentInAppUserGetDto { Id = pt.Assignment.Id, Title = pt.Assignment.Title }).ToList()));
+            CreateMap<AppUser, AppUserListItemDto>().ForMember(dest => dest.Assignments, opt => opt.MapFrom(src => src.AssignmentUsers.Select(pt => new AssignmentInAppUserGetDto { Id = pt.Assignment.Id, Title = pt.Assignment.Title }).ToList()));
 
             CreateMap<AppUserRole, RoleInAppUserGetDto>();
             CreateMap<Status, StatusInAssignmentGetDto>();
