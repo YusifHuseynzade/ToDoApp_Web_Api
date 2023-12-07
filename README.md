@@ -1,46 +1,46 @@
 # ToDoApp_Web_Api
 
-Bu layihe, .NET Core 6 və N-Tier arxitekturası istifadə edilərək yazilmisdir.
+This project is written using .NET Core 6 and follows the N-Tier architecture.
 
-## Funksiyanallıqlar
+## Features
 
-- **İstifadəçi İdarəetməsi**
-  - İstifadəçi qeydiyyatı (Register)
-  - İstifadəçi girişi (Login) - JWT token və refresh token istifadəsi
-  - İstifadəçiləri görüntüləmə
-  - İstifadəçiləri silmə
-  - İstifadəçi məlumatlarını dəyişmə
+- **User Management**
+  - User registration (Register)
+  - User login (Login) - Using JWT token and refresh token
+  - View users
+  - Delete users
+  - Change user information
 
-- **Yetkiləndirmə**
-  - İstifadəçilərin giriş etdikdən sonra yalnızca yetkilə işləmləri icra etməsi
-  - Yetkilərə görə iki əsas bölmə: Layihə rəhbəri və İşçi
+- **Authorization**
+  - Allowing users to perform authorized operations after login
+  - Two main roles based on permissions: Project Manager and Worker
 
-- **Sprint Əməliyyatları**
-  - Sprint əlavə etmək, dəyişmək, silmək
+- **Sprint Operations**
+  - Add, edit, and delete sprints
 
-- **Tapşırıq Əməliyyatları**
-  - Tapşırıq əlavə etmək, dəyişmək, silmək
+- **Task Operations**
+  - Add, edit, and delete tasks
 
-- **Rollar**
-  - İstifadəçilərin iki əsas rolu mövcuddur:
-    - Layihə rəhbəri
-    - İşçi
+- **Roles**
+  - There are two main roles for users:
+    - Project Manager
+    - Worker
 
-- **Layihə Rəhbəri Yetkiləri:**
-  - Sprintlərin və tapşırıqların bütün proseslərinə nəzarət etmə
-  - Tapşırıqlara işçi əlavə etmək, silmək və ya bu işçilərin bir tapşırıqdan başqa bir tapşırıqa yerini dəyişmək
-  - Tapşırığın statusunu dəyişmək
-  - Bütün sprintləri və ona aid olan tapşırıqları izləmək
-  - Tapşırığı yeniləyərək ona aid olduğu sprinti dəyişmək
-  - Todo List'də Code Review mərhələsində görüş yazmaq
+- **Project Manager Permissions:**
+  - Control all processes of sprints and tasks
+  - Add, delete workers to tasks or change the position of these workers from one task to another
+  - Change the status of a task
+  - Monitor all sprints and tasks associated with them
+  - Update a task to change the sprint it belongs to
+  - Write comments in the Todo List during the Code Review phase
 
-- **İşçi Yetkiləri:**
-  - Bütün Tapşırıqları görmək
-  - Yalnız öz tapşırıqlarını görmək
-  - Tapşırığın statusunu dəyişmək
-  - Todo List'də Code Review mərhələsində yalnız assign edildiyi tapşırıq ilə əlaqəli rəy yazmaq
-   
-- Tapşırıqların expire tarixi bitdiyində, avtomatik olaraq statuslarını "failed" olaraq dəyişmə (Cron job ilə)
+- **Worker Permissions:**
+  - View all tasks
+  - Only view their own tasks
+  - Change the status of a task
+  - Write comments in the Todo List during the Code Review phase only for the assigned task
 
-## Lisenziya
-Bu layihə MIT Lisenziyası ilə lisenziyalanmışdır - detallar üçün [LICENSE.md](LICENSE.md) faylına baxın.
+- Automatically change the status of tasks to "failed" when their expiration date has passed (Using a Cron job)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
