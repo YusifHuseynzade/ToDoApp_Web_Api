@@ -2,8 +2,8 @@
 using BLL.Abstract;
 using BLL.Dtos.AssignmentDtos;
 using BLL.Dtos.PaginationDto;
-using Domain.Entities;
-using Domain.IRepositories;
+using Entity.Entities;
+using Entity.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

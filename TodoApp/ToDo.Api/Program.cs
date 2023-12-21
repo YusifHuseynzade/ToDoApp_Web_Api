@@ -7,7 +7,7 @@ using BLL.Mapper;
 using DAL.AutoFac;
 using DAL.Context;
 using DAL.Repositories;
-using Domain.IRepositories;
+using Entity.IRepositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

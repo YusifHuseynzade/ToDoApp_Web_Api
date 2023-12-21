@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+﻿namespace Entity.Entities
 {
     public class Review : BaseEntity
     {

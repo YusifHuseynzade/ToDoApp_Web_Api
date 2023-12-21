@@ -28,5 +28,5 @@ C:\Users\DELL\Desktop\TodoApp\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\DELL\Desktop\TodoApp\DAL\obj\Debug\net6.0\ref\DAL.dll
 C:\Users\DELL\Desktop\TodoApp\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
 C:\Users\DELL\Desktop\TodoApp\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
-C:\Users\DELL\Desktop\TodoApp\DAL\bin\Debug\net6.0\Domain.dll
-C:\Users\DELL\Desktop\TodoApp\DAL\bin\Debug\net6.0\Domain.pdb
+C:\Users\DELL\Desktop\TodoApp\DAL\bin\Debug\net6.0\Entity.dll
+C:\Users\DELL\Desktop\TodoApp\DAL\bin\Debug\net6.0\Entity.pdb

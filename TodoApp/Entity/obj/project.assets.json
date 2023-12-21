@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj",
+      "projectName": "Entity",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\obj\\",
       "projectStyle": "PackageReference",

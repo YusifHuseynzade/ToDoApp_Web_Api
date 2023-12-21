@@ -1,5 +1,5 @@
 ﻿using DAL.Context;
-using Domain.IRepositories;
+using Entity.IRepositories;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

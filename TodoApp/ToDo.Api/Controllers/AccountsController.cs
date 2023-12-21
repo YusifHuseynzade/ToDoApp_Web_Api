@@ -1,6 +1,6 @@
 using BLL.Abstract;
 using DTO.AccountDtos;
-using Domain.Entities;
+using Entity.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using BLL.Dtos.AccountDtos;

@@ -32,5 +32,5 @@ C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.dll
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\refint\BLL.dll
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\BLL.pdb
 C:\Users\DELL\Desktop\TodoApp\BLL\obj\Debug\net6.0\ref\BLL.dll
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Domain.dll
-C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Domain.pdb
+C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Entity.dll
+C:\Users\DELL\Desktop\TodoApp\BLL\bin\Debug\net6.0\Entity.pdb

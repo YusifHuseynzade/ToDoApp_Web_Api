@@ -1,5 +1,5 @@
 ﻿using BLL.Dtos.AccountDtos;
-using Domain.Entities;
+using Entity.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 

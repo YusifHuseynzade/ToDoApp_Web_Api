@@ -4,7 +4,7 @@ using BLL.Dtos.AssignmentDtos;
 using BLL.Dtos.RoleDto;
 using BLL.Dtos.SprintDtos;
 using BLL.Dtos.StatusDto;
-using Domain.Entities;
+using Entity.Entities;
 using DTO.AccountDtos;
 using Microsoft.AspNetCore.Http;
 using System.Data;

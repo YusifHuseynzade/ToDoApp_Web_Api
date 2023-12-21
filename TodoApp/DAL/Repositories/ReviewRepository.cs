@@ -1,6 +1,6 @@
 ﻿using DAL.Context;
-using Domain.Entities;
-using Domain.IRepositories;
+using Entity.Entities;
+using Entity.IRepositories;
 
 namespace DAL.Repositories
 {

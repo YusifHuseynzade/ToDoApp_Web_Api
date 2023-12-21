@@ -35,8 +35,8 @@
               "C:\\Users\\DELL\\Desktop\\TodoApp\\DAL\\DAL.csproj": {
                 "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj"
+              "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj"
               }
             }
           }
@@ -128,8 +128,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj"
+              "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj"
               }
             }
           }
@@ -193,12 +193,12 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj": {
+    "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\DELL\\Desktop\\TodoApp\\Entity\\obj\\",
         "projectStyle": "PackageReference",
